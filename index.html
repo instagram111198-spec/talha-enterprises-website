@@ -187,6 +187,22 @@ footer{
         height:220px;
     }
 }
+.filter-btn{
+    padding:12px 22px;
+    margin:5px;
+    border:2px solid #f59e0b;
+    background:white;
+    color:#111827;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+    background:#f59e0b;
+    color:#111827;
+}    
 </style>
 </head>
 
@@ -248,12 +264,26 @@ View Products
 <h2>Our Products</h2>
 
 <p>Quality products for construction, plumbing and industrial projects.</p>
+<div style="text-align:center; margin:30px 0;">
 
+<button onclick="filterProducts('all')" class="filter-btn active">
+All Products
+</button>
+
+<button onclick="filterProducts('pipes')" class="filter-btn">
+Pipes & Fittings
+</button>
+
+<button onclick="filterProducts('valves')" class="filter-btn">
+Valves
+</button>
+
+</div>
 </div>
 
 <div class="products">
 
-<div class="product">
+<div class="product pipes">
 <img src="01_PPRC_Green_Pipe_Fittings.png" alt="PPRC Green Pipe and Fittings">
 <div class="product-content">
 <h3>PPRC Green Pipe & Fittings</h3>
@@ -262,7 +292,7 @@ View Products
 </div>
 </div>
 
-<div class="product">
+<div class="product pipes">
 <img src="02_UPVC_Pressure_Grey_CL_B_C_D_E.png" alt="UPVC Pressure Pipe and Fittings">
 <div class="product-content">
 <h3>UPVC Pressure Pipe & Fittings</h3>
@@ -271,7 +301,7 @@ View Products
 </div>
 </div>
 
-<div class="product">
+<div class="product pipes">
 <img src="03_HDPE_Pipe_Fittings.png" alt="HDPE Pipe and Fittings">
 <div class="product-content">
 <h3>HDPE Pipe & Fittings</h3>
@@ -280,7 +310,7 @@ View Products
 </div>
 </div>
 
-<div class="product">
+<div class="product pipes">
 <img src="04_UPVC_SCH40_Pipe_Fittings.png" alt="UPVC SCH 40 Pipe and Fittings">
 <div class="product-content">
 <h3>UPVC SCH-40 Pipe & Fittings</h3>
@@ -289,7 +319,7 @@ View Products
 </div>
 </div>
 
-<div class="product">
+<div class="product pipes">
 <img src="05_UPVC_SCH80_Pipe_Fittings.png" alt="UPVC SCH 80 Pipe and Fittings">
 <div class="product-content">
 <h3>UPVC SCH-80 Pipe & Fittings</h3>
@@ -298,7 +328,7 @@ View Products
 </div>
 </div>
 
-<div class="product">
+<div class="product pipes">
 <img src="06_CPVC_Light_Grey_Pipe_Fittings.png" alt="CPVC Pipe and Fittings">
 <div class="product-content">
 <h3>CPVC Pipe & Fittings</h3>
@@ -307,7 +337,7 @@ View Products
 </div>
 </div>
 
-<div class="product">
+<div class="product pipes">
 <img src="07_UPVC_EN1401_Orange.png" alt="UPVC EN 1401 Orange Sewerage Pipe">
 <div class="product-content">
 <h3>UPVC EN-1401 Pipe</h3>
@@ -316,7 +346,7 @@ View Products
 </div>
 </div>
 
-<div class="product">
+<div class="product pipes">
 <img src="08_GI_Pipe_Fittings.png" alt="GI Pipe and Fittings">
 <div class="product-content">
 <h3>GI Pipe & Fittings</h3>
@@ -325,7 +355,7 @@ View Products
 </div>
 </div>
 
-<div class="product">
+<div class="product pipes">
 <img src="09_MS_Pipe_Fittings.png" alt="MS Pipe and Fittings">
 <div class="product-content">
 <h3>MS Pipe & Fittings</h3>
@@ -334,7 +364,7 @@ View Products
 </div>
 </div>
 
-<div class="product">
+<div class="product pipes">
 <img src="10_SS_Pipe_Fittings.png" alt="SS Pipe and Fittings">
 <div class="product-content">
 <h3>SS Pipe & Fittings</h3>
@@ -343,7 +373,7 @@ View Products
 </div>
 </div>
 
-<div class="product">
+<div class="product pipes">
 <img src="11_UPVC_EN1329_Sewerage.png" alt="UPVC EN 1329 Sewerage Pipe">
 <div class="product-content">
 <h3>UPVC EN-1329 Sewerage</h3>
@@ -352,7 +382,7 @@ View Products
 </div>
 </div>
 
-<div class="product">
+<div class="product valves">
 <img src="12_Brass_Handle_Valve.png" alt="Brass Handle Valve">
 <div class="product-content">
 <h3>Brass Handle Valve</h3>
@@ -361,7 +391,7 @@ View Products
 </div>
 </div>
 
-<div class="product">
+<div class="product valves">
 <img src="13_Brass_Gate_Valve.png" alt="Brass Gate Valve">
 <div class="product-content">
 <h3>Brass Gate Valve</h3>
@@ -370,7 +400,7 @@ View Products
 </div>
 </div>
 
-<div class="product">
+<div class="product valves">
 <img src="14_Brass_NRV_Lift_Type.png" alt="Brass NRV Lift Type">
 <div class="product-content">
 <h3>Brass NRV – Lift Type</h3>
@@ -379,7 +409,7 @@ View Products
 </div>
 </div>
 
-<div class="product">
+<div class="product valves">
 <img src="15_Brass_NRV_Swing_Type.png" alt="Brass NRV Swing Type">
 <div class="product-content">
 <h3>Brass NRV – Swing Type</h3>
@@ -388,7 +418,7 @@ View Products
 </div>
 </div>
 
-<div class="product">
+<div class="product valves">
 <img src="16_Brass_Y_Strainer.png" alt="Brass Y Strainer">
 <div class="product-content">
 <h3>Brass Y-Strainer</h3>
@@ -397,7 +427,7 @@ View Products
 </div>
 </div>
 
-<div class="product">
+<div class="product valves">
 <img src="17_Brass_PRV.png" alt="Brass Pressure Reducing Valve">
 <div class="product-content">
 <h3>Brass PRV</h3>
@@ -406,7 +436,7 @@ View Products
 </div>
 </div>
 
-<div class="product">
+<div class="product valves">
 <img src="18_Brass_Butterfly_Valve.png" alt="Brass Butterfly Valve">
 <div class="product-content">
 <h3>Brass Butterfly Valve</h3>
