@@ -266,15 +266,15 @@ View Products
 <p>Quality products for construction, plumbing and industrial projects.</p>
 <div style="text-align:center; margin:30px 0;">
 
-<button onclick="filterProducts('all')" class="filter-btn active">
+<button onclick="filterProducts('all', this)" class="filter-btn active">
 All Products
 </button>
 
-<button onclick="filterProducts('pipes')" class="filter-btn">
+<button onclick="filterProducts('pipes', this)" class="filter-btn">
 Pipes & Fittings
 </button>
 
-<button onclick="filterProducts('valves')" class="filter-btn">
+<button onclick="filterProducts('valves', this)" class="filter-btn">
 Valves
 </button>
 
@@ -608,8 +608,67 @@ talhaenterprises73@gmail.com
 </div>
 
 </section>
-
 <script>
+
+function filterProducts(category, button){
+
+    let products = document.querySelectorAll("#products .product");
+    let buttons = document.querySelectorAll(".filter-btn");
+
+    buttons.forEach(function(btn){
+        btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    products.forEach(function(product){
+
+        if(category === "all"){
+            product.style.display = "block";
+        }
+        else if(product.classList.contains(category)){
+            product.style.display = "block";
+        }
+        else{
+            product.style.display = "none";
+        }
+
+    });
+
+}
+
+
+document.getElementById("quoteForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let company = document.getElementById("company").value;
+    let phone = document.getElementById("phone").value;
+    let product = document.getElementById("product").value;
+    let size = document.getElementById("size").value;
+    let quantity = document.getElementById("quantity").value;
+    let message = document.getElementById("message").value;
+
+    let whatsappMessage =
+    "Hello Talha Enterprises,%0A%0A" +
+    "I would like to request a quotation.%0A%0A" +
+    "Name: " + encodeURIComponent(name) + "%0A" +
+    "Company: " + encodeURIComponent(company) + "%0A" +
+    "WhatsApp: " + encodeURIComponent(phone) + "%0A" +
+    "Product: " + encodeURIComponent(product) + "%0A" +
+    "Size: " + encodeURIComponent(size) + "%0A" +
+    "Quantity: " + encodeURIComponent(quantity) + "%0A" +
+    "Requirements: " + encodeURIComponent(message);
+
+    window.open(
+        "https://wa.me/923346438231?text=" + whatsappMessage,
+        "_blank"
+    );
+
+});
+
+</script>
 
 document.getElementById("quoteForm").addEventListener("submit", function(e){
 
