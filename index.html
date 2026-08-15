@@ -492,24 +492,83 @@ Our focus is reliable product sourcing, competitive pricing and dependable suppl
 
 <section class="quote" id="contact">
 
-<h2>Need a Quotation?</h2>
+<h2>Request a Quotation</h2>
 
 <p>
-Send us your required product, size and quantity.
+Tell us what you need and we will get back to you with our best quotation.
 </p>
 
-<div style="margin:25px 0; font-size:18px; line-height:2;">
+<form id="quoteForm" style="max-width:650px; margin:30px auto 0; text-align:left;">
+
+<div style="margin-bottom:15px;">
+<label>Name</label>
+<input type="text" id="name" placeholder="Your Name" required
+style="width:100%; padding:14px; margin-top:6px; border:none; border-radius:6px; font-size:16px;">
+</div>
+
+<div style="margin-bottom:15px;">
+<label>Company Name</label>
+<input type="text" id="company" placeholder="Company / Organization"
+style="width:100%; padding:14px; margin-top:6px; border:none; border-radius:6px; font-size:16px;">
+</div>
+
+<div style="margin-bottom:15px;">
+<label>WhatsApp Number</label>
+<input type="tel" id="phone" placeholder="03XX XXXXXXX" required
+style="width:100%; padding:14px; margin-top:6px; border:none; border-radius:6px; font-size:16px;">
+</div>
+
+<div style="margin-bottom:15px;">
+<label>Product Required</label>
+<input type="text" id="product" placeholder="e.g. PPRC Pipe, Brass Valve"
+required
+style="width:100%; padding:14px; margin-top:6px; border:none; border-radius:6px; font-size:16px;">
+</div>
+
+<div style="display:flex; gap:15px; margin-bottom:15px;">
+
+<div style="width:50%;">
+<label>Size</label>
+<input type="text" id="size" placeholder="e.g. 32mm"
+style="width:100%; padding:14px; margin-top:6px; border:none; border-radius:6px; font-size:16px;">
+</div>
+
+<div style="width:50%;">
+<label>Quantity</label>
+<input type="text" id="quantity" placeholder="e.g. 100 pcs"
+style="width:100%; padding:14px; margin-top:6px; border:none; border-radius:6px; font-size:16px;">
+</div>
+
+</div>
+
+<div style="margin-bottom:20px;">
+<label>Additional Requirements</label>
+<textarea id="message" placeholder="Delivery location, specifications or any other requirements"
+rows="4"
+style="width:100%; padding:14px; margin-top:6px; border:none; border-radius:6px; font-size:16px; resize:vertical;"></textarea>
+</div>
+
+<button type="submit" class="btn"
+style="border:none; cursor:pointer; font-size:16px;">
+Send Quotation Request on WhatsApp
+</button>
+
+</form>
+
+<div style="margin-top:30px; font-size:17px;">
 
 <p>
 <strong>WhatsApp:</strong>
-<a href="https://wa.me/923346438231" style="color:#f59e0b; text-decoration:none;">
+<a href="https://wa.me/923346438231"
+style="color:#f59e0b; text-decoration:none;">
 +92 334 6438231
 </a>
 </p>
 
 <p>
 <strong>Email:</strong>
-<a href="mailto:talhaenterprises73@gmail.com" style="color:#f59e0b; text-decoration:none;">
+<a href="mailto:talhaenterprises73@gmail.com"
+style="color:#f59e0b; text-decoration:none;">
 talhaenterprises73@gmail.com
 </a>
 </p>
@@ -520,15 +579,41 @@ talhaenterprises73@gmail.com
 
 </div>
 
-<a class="btn" href="https://wa.me/923346438231">
-WhatsApp Us
-</a>
-
-<a class="btn btn2" href="mailto:talhaenterprises73@gmail.com">
-Email Us
-</a>
-
 </section>
+
+<script>
+
+document.getElementById("quoteForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let name = document.getElementById("name").value;
+let company = document.getElementById("company").value;
+let phone = document.getElementById("phone").value;
+let product = document.getElementById("product").value;
+let size = document.getElementById("size").value;
+let quantity = document.getElementById("quantity").value;
+let message = document.getElementById("message").value;
+
+let whatsappMessage =
+"Hello Talha Enterprises,%0A%0A" +
+"I would like to request a quotation.%0A%0A" +
+"Name: " + encodeURIComponent(name) + "%0A" +
+"Company: " + encodeURIComponent(company) + "%0A" +
+"WhatsApp: " + encodeURIComponent(phone) + "%0A" +
+"Product: " + encodeURIComponent(product) + "%0A" +
+"Size: " + encodeURIComponent(size) + "%0A" +
+"Quantity: " + encodeURIComponent(quantity) + "%0A" +
+"Requirements: " + encodeURIComponent(message);
+
+window.open(
+"https://wa.me/923346438231?text=" + whatsappMessage,
+"_blank"
+);
+
+});
+
+</script>
 
 <footer>
 
