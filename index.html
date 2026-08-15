@@ -11,7 +11,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
 }
 
 body{
@@ -100,24 +100,45 @@ section{
 
 .products{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:25px;
 }
 
-.card{
+.product{
     background:white;
-    padding:30px;
     border-radius:10px;
     box-shadow:0 5px 20px rgba(0,0,0,.08);
+    overflow:hidden;
+    padding-bottom:25px;
 }
 
-.card h3{
+.product img{
+    width:100%;
+    height:250px;
+    object-fit:contain;
+    display:block;
+    background:#fff;
+    padding:15px;
+}
+
+.product-content{
+    padding:0 25px;
+}
+
+.product-content h3{
     margin-bottom:12px;
     font-size:22px;
 }
 
-.card p{
+.product-content p{
     color:#666;
+    margin-bottom:15px;
+}
+
+.product-content a{
+    color:#f59e0b;
+    font-weight:bold;
+    text-decoration:none;
 }
 
 .about{
@@ -161,6 +182,10 @@ footer{
     .hero h1{
         font-size:38px;
     }
+
+    .product img{
+        height:220px;
+    }
 }
 </style>
 </head>
@@ -181,7 +206,6 @@ Talha Enterprises
 </nav>
 
 </header>
-
 
 <section class="hero" id="home">
 
@@ -207,7 +231,6 @@ Get Quotation
 
 </section>
 
-
 <section id="products">
 
 <div class="section-title">
@@ -218,240 +241,173 @@ Get Quotation
 
 </div>
 
+<div class="products">
 
 <div class="product">
-
-<img src="Talha_Enterprises_Product_Images/01_PPRC_Green_Pipe_Fittings.png" alt="PPRC Green Pipe and Fittings">
-
+<img src="01_PPRC_Green_Pipe_Fittings.png" alt="PPRC Green Pipe and Fittings">
 <div class="product-content">
 <h3>PPRC Green Pipe & Fittings</h3>
 <p>Green PPRC pipes and fittings for hot and cold water plumbing systems.</p>
 <a href="https://wa.me/923001234567">Get Quote →</a>
 </div>
-
 </div>
 
-
 <div class="product">
-
-<img src="Talha_Enterprises_Product_Images/02_UPVC_Pressure_Grey_CL_B_C_D_E.png" alt="UPVC Pressure Pipe and Fittings">
-
+<img src="02_UPVC_Pressure_Grey_CL_B_C_D_E.png" alt="UPVC Pressure Pipe and Fittings">
 <div class="product-content">
 <h3>UPVC Pressure Pipe & Fittings</h3>
 <p>Grey UPVC pressure pipes and fittings available in CL-B, CL-C, CL-D and CL-E.</p>
 <a href="https://wa.me/923001234567">Get Quote →</a>
 </div>
-
 </div>
 
-
 <div class="product">
-
-<img src="Talha_Enterprises_Product_Images/03_HDPE_Pipe_Fittings.png" alt="HDPE Pipe and Fittings">
-
+<img src="03_HDPE_Pipe_Fittings.png" alt="HDPE Pipe and Fittings">
 <div class="product-content">
 <h3>HDPE Pipe & Fittings</h3>
 <p>HDPE piping solutions for water supply, infrastructure and industrial applications.</p>
 <a href="https://wa.me/923001234567">Get Quote →</a>
 </div>
-
 </div>
 
-
 <div class="product">
-
-<img src="Talha_Enterprises_Product_Images/04_UPVC_SCH40_Pipe_Fittings.png" alt="UPVC SCH 40 Pipe and Fittings">
-
+<img src="04_UPVC_SCH40_Pipe_Fittings.png" alt="UPVC SCH 40 Pipe and Fittings">
 <div class="product-content">
 <h3>UPVC SCH-40 Pipe & Fittings</h3>
 <p>UPVC SCH-40 pipes and fittings for plumbing and industrial applications.</p>
 <a href="https://wa.me/923001234567">Get Quote →</a>
 </div>
-
 </div>
 
-
 <div class="product">
-
-<img src="Talha_Enterprises_Product_Images/05_UPVC_SCH80_Pipe_Fittings.png" alt="UPVC SCH 80 Pipe and Fittings">
-
+<img src="05_UPVC_SCH80_Pipe_Fittings.png" alt="UPVC SCH 80 Pipe and Fittings">
 <div class="product-content">
 <h3>UPVC SCH-80 Pipe & Fittings</h3>
 <p>Heavy-duty UPVC SCH-80 piping solutions for demanding applications.</p>
 <a href="https://wa.me/923001234567">Get Quote →</a>
 </div>
-
 </div>
 
-
 <div class="product">
-
-<img src="Talha_Enterprises_Product_Images/06_CPVC_Light_Grey_Pipe_Fittings.png" alt="CPVC Pipe and Fittings">
-
+<img src="06_CPVC_Light_Grey_Pipe_Fittings.png" alt="CPVC Pipe and Fittings">
 <div class="product-content">
 <h3>CPVC Pipe & Fittings</h3>
 <p>Light grey CPVC pipes and fittings for hot and cold water systems.</p>
 <a href="https://wa.me/923001234567">Get Quote →</a>
 </div>
-
 </div>
 
-
 <div class="product">
-
-<img src="Talha_Enterprises_Product_Images/07_UPVC_EN1401_Orange.png" alt="UPVC EN 1401 Orange Sewerage Pipe">
-
+<img src="07_UPVC_EN1401_Orange.png" alt="UPVC EN 1401 Orange Sewerage Pipe">
 <div class="product-content">
 <h3>UPVC EN-1401 Pipe</h3>
 <p>Orange UPVC sewerage and drainage pipes according to EN-1401 requirements.</p>
 <a href="https://wa.me/923001234567">Get Quote →</a>
 </div>
-
 </div>
 
-
 <div class="product">
-
-<img src="Talha_Enterprises_Product_Images/08_GI_Pipe_Fittings.png" alt="GI Pipe and Fittings">
-
+<img src="08_GI_Pipe_Fittings.png" alt="GI Pipe and Fittings">
 <div class="product-content">
 <h3>GI Pipe & Fittings</h3>
 <p>Galvanized iron pipes and fittings for plumbing and industrial applications.</p>
 <a href="https://wa.me/923001234567">Get Quote →</a>
 </div>
-
 </div>
 
-
 <div class="product">
-
-<img src="Talha_Enterprises_Product_Images/09_MS_Pipe_Fittings.png" alt="MS Pipe and Fittings">
-
+<img src="09_MS_Pipe_Fittings.png" alt="MS Pipe and Fittings">
 <div class="product-content">
 <h3>MS Pipe & Fittings</h3>
 <p>Mild steel pipes and fittings for construction and industrial requirements.</p>
 <a href="https://wa.me/923001234567">Get Quote →</a>
 </div>
-
 </div>
 
-
 <div class="product">
-
-<img src="Talha_Enterprises_Product_Images/10_SS_Pipe_Fittings.png" alt="SS Pipe and Fittings">
-
+<img src="10_SS_Pipe_Fittings.png" alt="SS Pipe and Fittings">
 <div class="product-content">
 <h3>SS Pipe & Fittings</h3>
 <p>Stainless steel pipes and fittings for commercial and industrial applications.</p>
 <a href="https://wa.me/923001234567">Get Quote →</a>
 </div>
-
 </div>
 
-
 <div class="product">
-
-<img src="Talha_Enterprises_Product_Images/11_UPVC_EN1329_Sewerage.png" alt="UPVC EN 1329 Sewerage Pipe">
-
+<img src="11_UPVC_EN1329_Sewerage.png" alt="UPVC EN 1329 Sewerage Pipe">
 <div class="product-content">
 <h3>UPVC EN-1329 Sewerage</h3>
 <p>UPVC sewerage pipes and fittings suitable for drainage and soil waste systems.</p>
 <a href="https://wa.me/923001234567">Get Quote →</a>
 </div>
-
 </div>
 
-
 <div class="product">
-
-<img src="Talha_Enterprises_Product_Images/12_Brass_Handle_Valve.png" alt="Brass Handle Valve">
-
+<img src="12_Brass_Handle_Valve.png" alt="Brass Handle Valve">
 <div class="product-content">
 <h3>Brass Handle Valve</h3>
 <p>Quality brass handle valves for plumbing and water control applications.</p>
 <a href="https://wa.me/923001234567">Get Quote →</a>
 </div>
-
 </div>
 
-
 <div class="product">
-
-<img src="Talha_Enterprises_Product_Images/13_Brass_Gate_Valve.png" alt="Brass Gate Valve">
-
+<img src="13_Brass_Gate_Valve.png" alt="Brass Gate Valve">
 <div class="product-content">
 <h3>Brass Gate Valve</h3>
 <p>Brass gate valves for reliable flow isolation and plumbing applications.</p>
 <a href="https://wa.me/923001234567">Get Quote →</a>
 </div>
-
 </div>
 
-
 <div class="product">
-
-<img src="Talha_Enterprises_Product_Images/14_Brass_NRV_Lift_Type.png" alt="Brass NRV Lift Type">
-
+<img src="14_Brass_NRV_Lift_Type.png" alt="Brass NRV Lift Type">
 <div class="product-content">
 <h3>Brass NRV – Lift Type</h3>
 <p>Lift-type non-return valve for preventing reverse water flow.</p>
 <a href="https://wa.me/923001234567">Get Quote →</a>
 </div>
-
 </div>
 
-
 <div class="product">
-
-<img src="Talha_Enterprises_Product_Images/15_Brass_NRV_Swing_Type.png" alt="Brass NRV Swing Type">
-
+<img src="15_Brass_NRV_Swing_Type.png" alt="Brass NRV Swing Type">
 <div class="product-content">
 <h3>Brass NRV – Swing Type</h3>
 <p>Swing-type non-return valve for reliable one-way flow control.</p>
 <a href="https://wa.me/923001234567">Get Quote →</a>
 </div>
-
 </div>
 
-
 <div class="product">
-
-<img src="Talha_Enterprises_Product_Images/16_Brass_Y_Strainer.png" alt="Brass Y Strainer">
-
+<img src="16_Brass_Y_Strainer.png" alt="Brass Y Strainer">
 <div class="product-content">
 <h3>Brass Y-Strainer</h3>
 <p>Brass Y-strainer for filtering unwanted particles from piping systems.</p>
 <a href="https://wa.me/923001234567">Get Quote →</a>
 </div>
-
 </div>
 
-
 <div class="product">
-
-<img src="Talha_Enterprises_Product_Images/17_Brass_PRV.png" alt="Brass Pressure Reducing Valve">
-
+<img src="17_Brass_PRV.png" alt="Brass Pressure Reducing Valve">
 <div class="product-content">
 <h3>Brass PRV</h3>
 <p>Brass pressure reducing valve for controlling water pressure in piping systems.</p>
 <a href="https://wa.me/923001234567">Get Quote →</a>
 </div>
-
 </div>
 
-
 <div class="product">
-
-<img src="Talha_Enterprises_Product_Images/18_Brass_Butterfly_Valve.png" alt="Brass Butterfly Valve">
-
+<img src="18_Brass_Butterfly_Valve.png" alt="Brass Butterfly Valve">
 <div class="product-content">
 <h3>Brass Butterfly Valve</h3>
 <p>Butterfly valve solutions for efficient flow control in piping systems.</p>
 <a href="https://wa.me/923001234567">Get Quote →</a>
 </div>
+</div>
 
 </div>
 
+</section>
 
 <section class="about" id="about">
 
@@ -475,7 +431,6 @@ Our focus is reliable product sourcing, competitive pricing and dependable suppl
 
 </section>
 
-
 <section class="quote" id="contact">
 
 <h2>Need a Quotation?</h2>
@@ -491,7 +446,6 @@ WhatsApp Us
 </a>
 
 </section>
-
 
 <footer>
 
